@@ -10,6 +10,8 @@ const countIncreased = (arr) => {
   return counter;
 };
 
+/* part 2 */
+
 const compareWindows = (arr) => {
   const windows = arr.reduce(
     (acc, curr, index) =>
