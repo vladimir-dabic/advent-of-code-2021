@@ -11,13 +11,12 @@ const countIncreased = (arr) => {
 };
 
 const compareWindows = (arr) => {
-  const newArr = arr.map((item, index) => {
-    return item + arr[index + 1] + arr[index + 2];
-  });
-  console.log({ newArr });
-  // for (let i = 0; i < arr.length; i++) {
-  // if (arr[i+3] && )
-  // }
+  const windows = arr.reduce(
+    (acc, curr, index) =>
+      [...acc, curr + arr[index + 1] + arr[index + 2]].filter(Boolean),
+    [],
+  );
+  return countIncreased(windows);
 };
 
-module.exports = { countIncreased };
+module.exports = { countIncreased, compareWindows };
