@@ -1,5 +1,5 @@
 const fixture = require('./day3.fixture.json');
-const { findTheConsumption } = require('./day3.js');
+const { findTheConsumption, calculateOxygen } = require('./day3.js');
 const example = [
   '00100',
   '11110',
@@ -17,14 +17,13 @@ const example = [
 
 describe('day 3', () => {
   it('should work', () => {
-    const result = findTheConsumption(fixture);
+    const result = findTheConsumption(example);
     console.log({ result });
   });
 });
-
-// describe('day 2-2', () => {
-//   it.only('should find depth with aim', () => {
-//     const result = findDepthWithAim(example);
-//     console.log({ result });
-//   });
-// });
+describe('day 3-2', () => {
+  it('should work', () => {
+    const result = calculateOxygen(fixture);
+    console.log({ result });
+  });
+});
